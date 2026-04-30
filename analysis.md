@@ -1,44 +1,58 @@
-#Sales Exploratory Results /Discussion
+# Sales Analysis Summary
 
-#For this project, I analyzed sales data utilizing Excel to break down revenue performance by product.
+## Overview
+For my project, I utilized Excel to evaluate revenue patterns and identify statistically significant drivers of net sales for the Pelican stores. The analysis combines exploratory data analysis (EDA) and regression modeling to examine relationships between customer characteristics and spending behavior.
 
-##Key Findings
-The data indicates that female customers contribute the majority of total purchases. Females purchased 10,674 items compared to 4,890 items purchased by males, accounting for approximately 68.6% of total transactions. This demonstrates a strong skew in the distribution of purchases toward female consumers.
+## Exploratory Data Analysis
 
-Marital status is relatively balanced, with 723 married customers and 656 single customers. However, married customers exhibit slightly higher spending behavior, suggesting a marginally greater contribution to total revenue.
+The data shows strong variation in purchasing behavior across customer groups. Female customers purchased 10,674 items, compared to 4,890 items purchased by males. This represents approximately 68.6% of total purchases, indicating a heavily skewed distribution toward female consumers.
 
-The age variable ranges from approximately 25.5 to 90 years, with a mean value of 54.03. This indicates that the customer base is centered around a middle-aged demographic, which may correlate with higher disposable income and increased purchasing power.
+Marital status is relatively balanced, with 723 married customers and 656 single customers. However, married customers exhibit slightly higher spending behavior, suggesting a marginally greater contribution to total net sales.
 
-## Consumption Behavior Analysis
+Customer age ranges from approximately 25.5 to 90 years, with a mean of 54.03. This indicates that the customer base is centered around a middle-aged demographic.
 
-Transaction data shows that 1,089 out of 1,388 purchases were non-promotional, representing approximately 78.5% of total transactions. Promotional purchases account for only 21.5%, indicating that the majority of sales occur at full price.
+Transaction-level analysis shows that 1,089 out of 1,388 purchases were non-promotional, representing approximately 78.5% of total transactions. Promotional purchases account for only 21.5%, indicating that the majority of revenue is generated without promotional incentives.
 
-However, the conditional distribution of promotional purchases reveals that females account for 227 of the 299 promotional transactions, compared to 72 for males. This suggests that promotional responsiveness is not uniform across customer groups and may be more effective when targeted.
+The conditional distribution of promotional purchases shows that females account for 227 of the 299 promotional transactions, compared to 72 for males. This suggests that promotional responsiveness differs across customer segments.
 
-Additionally, the majority of transactions involve between 4 and 10 items, indicating a consistent purchasing pattern and moderate transaction volume.
+Most transactions involve between 4 and 10 items, indicating a consistent purchasing pattern.
 
-## Statistical Analysis
+## Regression Analysis
 
-Regression results identify several statistically significant predictors of net sales. Income has a positive coefficient and is highly statistically significant, with a p-value less than 0.001, indicating a strong relationship between income level and spending behavior.
+Both simple linear regression and multiple linear regression models were conducted to evaluate the relationship between customer characteristics and net sales.
 
-Age also demonstrates a positive relationship with net sales, with a p-value around 0.01, confirming statistical significance at conventional levels. This suggests that older customers tend to generate higher revenue.
+In the multiple regression model, net sales is the dependent variable, while age and customer income are independent variables.
 
-Education-related variables, such as years of schooling and possession of a bachelor’s degree, also exhibit statistically significant positive effects, with p-values approximately 0.005 and 0.0028 respectively. These results indicate that higher levels of education are associated with increased spending.
+The overall model is statistically significant, as indicated by the F-statistic p-value (Significance F ≈ 2.17e-05).
 
-Distance, on the other hand, has a negative coefficient, implying an inverse relationship with net sales. As distance increases, spending tends to decrease.
+However, the model has a low R-squared value (R² ≈ 0.0159), meaning only about 1.59% of the variation in net sales is explained by the model.
 
-Despite the statistical significance of these variables, the model’s R-squared value ranges from approximately 0.01 to 0.046. This indicates that the model explains only a small proportion of the variance in net sales, suggesting a relatively weak overall model fit and the presence of omitted variables.
+Customer income has a positive coefficient (β ≈ 0.115) and is highly statistically significant (p-value ≈ 0.00011). Since the p-value is lower than .05, this indicates that higher-income customers tend to spend more.
+
+Age has a positive coefficient (β ≈ 2.96) and is statistically significant (p-value ≈ 0.0135). This suggests that older customers tend to generate higher revenue.
+
+Education-related variables also show positive and statistically significant relationships with net sales, with p-values approximately 0.005 and 0.0028.
+
+Distance has a negative coefficient,meaning that as distance increases, net sales decrease.
+
+The intercept is not statistically significant.
+
+We can conclude that while there are some statistically significant predictors, the low R-squared indicates that additional variables are needed to better explain customer behavior for a better fit. 
 
 ## Business Implications
 
-From a data-driven perspective, the concentration of purchases among female customers suggests that targeted marketing strategies should prioritize this segment. Additionally, the strong positive relationship between income and net sales implies that high-income customers represent a key revenue-generating group.
+Sales are primarily driven by female customers and higher-income individuals. These groups represent key segments for targeted marketing strategies.
 
-The relatively low proportion of promotional transactions suggests that current promotional strategies may be underutilized or inefficient. Given the observed differences in responsiveness, segmentation-based promotional strategies could improve effectiveness.
+The strong positive relationship between income and spending suggests that high-income customers has a high impact on revenue.
 
-The negative relationship between distance and spending highlights the importance of accessibility. Reducing barriers such as travel distance or improving online purchasing options could positively impact revenue.
+Promotions are underutilized, accounting for only 21.5% of transactions. Targeted promotional strategies could improve effectiveness.
+
+The negative relationship between distance and sales highlights the importance of accessibility.
 
 ## Conclusion
 
-This analysis demonstrates how quantitative methods and statistical evaluation can be applied to understand sales performance. While key variables such as income, age, and education are statistically significant predictors of net sales, the low R-squared values indicate that additional factors influence customer behavior.
+This project demonstrates how exploratory data analysis and regression modeling can be used to evaluate sales performance.
 
-This project highlights the importance of combining descriptive analysis with statistical inference to generate meaningful business insights and guide data-driven decision-making.
+While income and age are statistically significant predictors, the low R-squared value indicates that customer behavior is influenced by multiple additional factors.
+
+Overall, the analysis highlights the importance of combining descriptive and statistical methods to generate meaningful business insights.
